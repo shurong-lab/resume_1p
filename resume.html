@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>個人履歷 - 亞洲大學學生</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    background:#f4f4f4;
+    color:#333;
+}
+
+header{
+    background:#2c3e50;
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+}
+
+header h1{
+    margin:10px 0;
+}
+
+.container{
+    width:80%;
+    margin:auto;
+    padding:20px;
+}
+
+section{
+    background:white;
+    padding:20px;
+    margin:20px 0;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+h2{
+    border-left:5px solid #3498db;
+    padding-left:10px;
+}
+
+.skill{
+    margin:10px 0;
+}
+
+.bar{
+    background:#ddd;
+    border-radius:20px;
+}
+
+.progress{
+    height:20px;
+    border-radius:20px;
+    background:#3498db;
+    width:0%;
+    transition:1s;
+}
+
+button{
+    background:#3498db;
+    border:none;
+    color:white;
+    padding:10px 20px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.dark{
+    background:#121212;
+    color:white;
+}
+
+.dark section{
+    background:#1e1e1e;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>個人履歷</h1>
+<p>亞洲大學學生</p>
+</header>
+
+<div class="container">
+
+<section>
+<h2>基本資料</h2>
+<p><b>姓名：</b>你的名字</p>
+<p><b>學校：</b>亞洲大學</p>
+<p><b>學號：</b>AU114018042</p>
+<p><b>Email：</b>your@email.com</p>
+</section>
+
+<section>
+<h2>自我介紹</h2>
+<p>
+我是亞洲大學的學生，對科技與創新充滿興趣，
+目前正在學習網頁設計與程式開發，希望未來能成為優秀的工程師。
+</p>
+</section>
+
+<section>
+<h2>技能</h2>
+
+<div class="skill">
+HTML
+<div class="bar"><div class="progress" data-width="80%"></div></div>
+</div>
+
+<div class="skill">
+CSS
+<div class="bar"><div class="progress" data-width="70%"></div></div>
+</div>
+
+<div class="skill">
+JavaScript
+<div class="bar"><div class="progress" data-width="60%"></div></div>
+</div>
+
+</section>
+
+<section>
+<h2>作品</h2>
+<ul>
+<li>個人網站</li>
+<li>簡單網頁遊戲</li>
+<li>課堂專案</li>
+</ul>
+</section>
+
+<section>
+<h2>聯絡方式</h2>
+<p>如果想聯絡我，可以透過 Email。</p>
+</section>
+
+<button onclick="toggleMode()">切換深色模式</button>
+
+</div>
+
+<footer>
+© 2026 亞洲大學學生履歷
+</footer>
+
+<script>
+
+window.onload=function(){
+    let bars=document.querySelectorAll(".progress");
+    bars.forEach(bar=>{
+        bar.style.width=bar.dataset.width;
+    });
+}
+
+function toggleMode(){
+    document.body.classList.toggle("dark");
+}
+
+</script>
+
+</body>
+</html>
