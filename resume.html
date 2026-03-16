@@ -1,173 +1,157 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>個人履歷 - 亞洲大學學生</title>
-
-<style>
-
-body{
-    font-family: Arial, sans-serif;
-    margin:0;
-    background:#f4f4f4;
-    color:#333;
-}
-
-header{
-    background:#2c3e50;
-    color:white;
-    text-align:center;
-    padding:40px 20px;
-}
-
-header h1{
-    margin:10px 0;
-}
-
-.container{
-    width:80%;
-    margin:auto;
-    padding:20px;
-}
-
-section{
-    background:white;
-    padding:20px;
-    margin:20px 0;
-    border-radius:10px;
-    box-shadow:0 0 10px rgba(0,0,0,0.1);
-}
-
-h2{
-    border-left:5px solid #3498db;
-    padding-left:10px;
-}
-
-.skill{
-    margin:10px 0;
-}
-
-.bar{
-    background:#ddd;
-    border-radius:20px;
-}
-
-.progress{
-    height:20px;
-    border-radius:20px;
-    background:#3498db;
-    width:0%;
-    transition:1s;
-}
-
-button{
-    background:#3498db;
-    border:none;
-    color:white;
-    padding:10px 20px;
-    border-radius:5px;
-    cursor:pointer;
-}
-
-.dark{
-    background:#121212;
-    color:white;
-}
-
-.dark section{
-    background:#1e1e1e;
-}
-
-footer{
-    text-align:center;
-    padding:20px;
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mochi 的個人履歷</title>
+    <style>
+        /* CSS 樣式區域 */
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 30px 20px; 
+            transition: background-color 0.3s, color 0.3s; 
+        }
+        
+        /* 深色模式樣式 */
+        .dark-mode { 
+            background-color: #222; 
+            color: #f4f4f4; 
+        }
+        
+        header { 
+            text-align: center; 
+            border-bottom: 2px solid #0056b3; 
+            padding-bottom: 20px; 
+            margin-bottom: 30px; 
+        }
+        
+        h1 { margin-bottom: 5px; letter-spacing: 2px;}
+        
+        .contact-info { 
+            font-size: 1.1em; 
+            color: #666; 
+        }
+        .dark-mode .contact-info { color: #aaa; }
+        
+        section { margin-bottom: 30px; }
+        
+        h2 { 
+            color: #0056b3; 
+            border-left: 4px solid #0056b3; 
+            padding-left: 12px; 
+            margin-bottom: 15px;
+        }
+        .dark-mode h2 { 
+            color: #4da3ff; 
+            border-left-color: #4da3ff; 
+        }
+        
+        .item { margin-bottom: 20px; }
+        .item-title { font-weight: bold; font-size: 1.1em;}
+        .item-date { font-size: 0.9em; color: #777; font-style: italic; }
+        .dark-mode .item-date { color: #bbb; }
+        
+        ul { 
+            list-style-type: square; 
+            padding-left: 20px; 
+            margin-top: 8px;
+        }
+        li { margin-bottom: 5px; }
+        
+        /* 按鈕樣式 */
+        .theme-btn { 
+            background-color: #0056b3; 
+            color: white; 
+            border: none; 
+            padding: 10px 15px; 
+            cursor: pointer; 
+            border-radius: 5px; 
+            float: right; 
+            font-weight: bold;
+        }
+        .theme-btn:hover { background-color: #004494; }
+        .dark-mode .theme-btn { 
+            background-color: #4da3ff; 
+            color: #222; 
+        }
+        .dark-mode .theme-btn:hover { background-color: #3388dd; }
+        
+        /* 清除浮動 */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
 </head>
-
 <body>
 
-<header>
-<h1>個人履歷</h1>
-<p>亞洲大學學生</p>
-</header>
+    <div class="clearfix">
+        <button class="theme-btn" onclick="toggleTheme()">切換深色/淺色模式</button>
+    </div>
 
-<div class="container">
+    <header>
+        <h1>Mochi</h1>
+        <div class="contact-info">
+            亞洲大學 | 一年級<br>
+            學號：AU114018042<br>
+        </div>
+    </header>
 
-<section>
-<h2>基本資料</h2>
-<p><b>姓名：</b>你的名字</p>
-<p><b>學校：</b>亞洲大學</p>
-<p><b>學號：</b>AU114018042</p>
-<p><b>Email：</b>your@email.com</p>
-</section>
+    <section>
+        <h2>個人簡介</h2>
+        <p>對語言學及語音學充滿熱忱，並積極探索語言治療與聽力學領域。喜歡透過實地參訪與學術活動擴充視野，具備團隊合作精神，並持續精進英語能力。</p>
+    </section>
 
-<section>
-<h2>自我介紹</h2>
-<p>
-我是亞洲大學的學生，對科技與創新充滿興趣，
-目前正在學習網頁設計與程式開發，希望未來能成為優秀的工程師。
-</p>
-</section>
+    <section>
+        <h2>學歷</h2>
+        <div class="item">
+            <span class="item-title">亞洲大學</span>
+            <span class="item-date"> | 目前就讀</span>
+            <ul>
+                <li>積極參與校內外學術論壇與各項團隊活動。</li>
+            </ul>
+        </div>
+    </section>
 
-<section>
-<h2>技能</h2>
+    <section>
+        <h2>活動與參訪經驗</h2>
+        <div class="item">
+            <span class="item-title">團隊營隊活動 (第二小隊)</span>
+            <span class="item-date"> | 2026年2月</span>
+            <ul>
+                <li>參與團隊建設與破冰活動，培養團隊合作與溝通能力。</li>
+            </ul>
+        </div>
+        <div class="item">
+            <span class="item-title">科林助聽器門市參訪</span>
+            <span class="item-date"> | 2026年1月</span>
+            <ul>
+                <li>實地了解聽力學實務應用與聽損者需求，增進對聽力照護的初步認識。</li>
+            </ul>
+        </div>
+    </section>
 
-<div class="skill">
-HTML
-<div class="bar"><div class="progress" data-width="80%"></div></div>
-</div>
+    <section>
+        <h2>技能與興趣</h2>
+        <ul>
+            <li><strong>專業興趣：</strong> 語言治療、聽力學、語音學基礎探討。</li>
+            <li><strong>語言能力：</strong> 持續學習與精進英語能力。</li>
+            <li><strong>休閒嗜好：</strong> 古典音樂賞析 (特別喜愛拉赫曼尼諾夫與布拉姆斯的作品)、猜燈謎。</li>
+        </ul>
+    </section>
 
-<div class="skill">
-CSS
-<div class="bar"><div class="progress" data-width="70%"></div></div>
-</div>
-
-<div class="skill">
-JavaScript
-<div class="bar"><div class="progress" data-width="60%"></div></div>
-</div>
-
-</section>
-
-<section>
-<h2>作品</h2>
-<ul>
-<li>個人網站</li>
-<li>簡單網頁遊戲</li>
-<li>課堂專案</li>
-</ul>
-</section>
-
-<section>
-<h2>聯絡方式</h2>
-<p>如果想聯絡我，可以透過 Email。</p>
-</section>
-
-<button onclick="toggleMode()">切換深色模式</button>
-
-</div>
-
-<footer>
-© 2026 亞洲大學學生履歷
-</footer>
-
-<script>
-
-window.onload=function(){
-    let bars=document.querySelectorAll(".progress");
-    bars.forEach(bar=>{
-        bar.style.width=bar.dataset.width;
-    });
-}
-
-function toggleMode(){
-    document.body.classList.toggle("dark");
-}
-
-</script>
+    <script>
+        // 切換深色與淺色模式的函式
+        function toggleTheme() {
+            // 在 body 標籤上切換 'dark-mode' 這個 class
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
 
 </body>
 </html>
